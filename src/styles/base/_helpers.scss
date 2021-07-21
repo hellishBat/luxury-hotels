@@ -1,0 +1,117 @@
+// Helpers
+.container {
+  max-width: $max-width + px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+
+  @include respond(max-lg) {
+    max-width: 970px;
+  }
+
+  @include respond(max-md) {
+    max-width: 750px;
+  }
+
+  @include respond(max-sm) {
+    max-width: 570px;
+  }
+
+  @include respond(max-xs) {
+    max-width: none;
+    min-width: $min-width;
+  }
+}
+
+.d-g {
+  display: grid;
+}
+
+.d-f {
+  display: flex;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-b {
+  align-items: baseline;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.fd-rr {
+  flex-direction: row-reverse;
+}
+
+.fxw-w {
+  flex-wrap: wrap;
+}
+
+.ovl-50 {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0.5));
+    content: "";
+  }
+}
+
+.ar-16-9 {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: (9 / 16) * 100%;
+  overflow: hidden;
+
+  &>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ar-1-1 {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (1 / 1) * 100%;
+  }
+
+  &>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+}
