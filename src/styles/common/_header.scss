@@ -1,30 +1,116 @@
 // Header
 .header {
   position: absolute;
-  flex: 0 0 auto;
-  width: 100%;
-  top: 0;
-  left: 0;
   z-index: 100;
-  transition: transform 0.5s ease 0s;
+  width: 100%;
 
-  &__link {
-    transition: color 0.3s ease 0s;
+  &.fixed {
+    position: fixed;
+    padding: 0.75rem 0;
+    background: $brand-secondary;
+
+    .header__logo {
+      max-width: 6rem;
+      background-color: transparent;
+    }
+
+    .header__img--lg {
+      display: none;
+    }
+
+    .header__img--sm {
+      display: inline-block;
+    }
 
     @include respond(min-md) {
-      &:hover {
-        & {
-          color: $white;
-        }
+      .header__nav {
+        padding: 0.5rem 0;
       }
     }
+  }
+
+  &__logo {
+    max-width: 10.24rem;
+  }
+
+  &__img {
+    &--lg {
+      display: inline-block;
+    }
+
+    &--sm {
+      display: none;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
   }
 
   &__menu-btn {
     display: none;
   }
 
+  &__nav {
+    padding: 2.5rem 0;
+  }
+
+  &__item {
+    margin-right: 3.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 0 2px;
+    color: $white;
+
+    @include respond(min-md) {
+      &::before {
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: $white;
+        transform: scale(0);
+        transition: transform 0.3s ease 0s;
+        content: "";
+      }
+
+      &.active::before,
+      &:hover::before {
+        transform: scale(1);
+      }
+    }
+  }
+
   @include respond(max-md) {
+    &__logo {
+      z-index: 102;
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 102;
+      max-width: 320px;
+      height: 100%;
+      margin: 0;
+      padding: 5rem 2rem 2rem;
+      background-color: $brand-secondary;
+      transform: translateX(100%);
+      transition: transform 0.5s ease 0s;
+
+      &.active {
+        transform: translateY(0);
+      }
+    }
+
     &__menu-btn {
       position: relative;
       display: block;
@@ -75,6 +161,31 @@
       &:last-child {
         bottom: 0;
       }
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 0;
+      padding: 0.8rem 0;
+    }
+
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include respond(max-xs) {
+    &.fixed {
+      .header__logo {
+        max-width: 4.625rem;
+      }
+    }
+
+    &__logo {
+      max-width: 6.9rem;
     }
   }
 }

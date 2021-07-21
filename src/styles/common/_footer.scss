@@ -1,4 +1,150 @@
 // Footer
 .footer {
-  flex: 0 0 auto;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: auto;
+  padding: 77px 0;
+  background: $brand-secondary;
+  font-size: 0.8rem;
+  font-size: 16px;
+  color: $white;
+
+  &::before {
+    position: absolute;
+    display: block;
+    top: -2.16rem;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3rem 2.16rem 3rem;
+    border-color: transparent transparent $brand-secondary transparent;
+    transform: translateX(-50%);
+    content: "";
+  }
+
+  &__row {
+    justify-content: space-between;
+    margin: 0 -15px;
+  }
+
+  &__col {
+    padding: 0 15px;
+  }
+
+  &__logo {
+    max-width: 6.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__contacts {
+    font-style: normal;
+  }
+
+  &__contacts-item,
+  &__nav-item,
+  &__social-item {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts-link,
+  &__nav-link,
+  &__social-link {
+    transition: color 0.3s ease 0s;
+
+    @include respond(min-md) {
+      &:hover {
+        color: $brand-main;
+      }
+    }
+  }
+
+  &__nav-link,
+  &__social-link {
+    font-weight: 400;
+  }
+
+  &__social-link {
+    position: relative;
+    padding-left: 1.4rem;
+  }
+
+  &__social-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+    transform: translateY(-50%);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: inherit;
+  }
+
+  &__input {
+    display: block;
+    padding: 0.775rem 1.25rem;
+    border: 0.1rem solid $brand-main;
+    border: 2px solid $brand-main;
+
+    border-radius: 4px 0 0 4px;
+    background-color: transparent;
+    line-height: inherit;
+    color: inherit;
+    outline: transparent;
+    transition: box-shadow 0.3s ease 0s;
+
+    &::placeholder {
+      color: inherit;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px rgba($brand-main, 0.8);
+    }
+  }
+
+  &__input-btn {
+    display: block;
+    padding: 0.875rem 1rem;
+    border-radius: 0 4px 4px 0;
+    color: $brand-secondary;
+    outline: none;
+  }
+
+  @include respond(max-md) {
+    &__row {
+      justify-content: center;
+      margin-bottom: -1.5rem;
+    }
+
+    &__col {
+      width: 50%;
+      margin-bottom: 1.5rem;
+    }
+
+    &__input {
+      padding: 0.75rem 1.25rem;
+    }
+  }
+
+  @include respond(max-sm) {
+    & {
+      text-align: center;
+    }
+
+    &__col {
+      width: 100%;
+    }
+
+    &__wrapper {
+      max-width: 100%;
+    }
+  }
 }

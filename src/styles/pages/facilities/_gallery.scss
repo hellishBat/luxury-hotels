@@ -1,0 +1,40 @@
+// Gallery
+.gallery {
+  overflow: hidden;
+
+  &__box {
+    margin: 0 -1px -1px 0;
+  }
+
+  &__item {
+    width: calc((100% / 4) - 1px);
+    margin: 0 1px 1px 0;
+    cursor: zoom-in;
+
+    @include respond(min-md) {
+      &:hover {
+        .gallery__pic::before {
+          background: rgba(20, 39, 74, 0.5);
+        }
+      }
+    }
+  }
+
+  &__pic {
+    &::before {
+      transition: background-color 0.3s ease 0s;
+    }
+  }
+
+  @include respond(max-md) {
+    &__item {
+      width: calc((100% / 3) - 1px);
+    }
+  }
+
+  @include respond(max-xs) {
+    &__item {
+      width: calc((100% / 2) - 1px);
+    }
+  }
+}

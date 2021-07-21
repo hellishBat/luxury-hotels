@@ -1,0 +1,23 @@
+<!-- Testimonials -->
+include ../includes/mixins/mixins
+
+section.testimonials.section
+  .container
+    .testimonials__subheading.subheading
+      | Testimonials
+    .testimonials__slider.swiper-container
+      .testimonials__wrapper.swiper-wrapper
+        +testimonials_item("Stunning hotel, luxurious bright rooms, great evening concerts on the terrace.", "Martin Davis, UK")
+        +testimonials_item("Very nice hotel, we stayed here for 2 weeks! Nice staff, atmosphere, the food was good!", "Jana, Luxembourg")
+        +testimonials_item("Spotlessly Clean, wonderful staff, extremely comfortable room, excellent facilities.", "Andrew, UK")
+        +testimonials_item("We had a great time at this hotel. Great breakfast, fantastic restaurant, awesome beach.", "Laura, UK")
+        +testimonials_item("Exceptional. From the rooms, to the staff, to the food everything was just extraordinary.", "Marcel, Spain")
+
+      .testimonials__controls
+        button.testimonials__btn.testimonials__btn--prev.btn
+          svg.testimonials__btn-icon
+            use(href='images/sprite.svg#arrow-prev')
+        button.testimonials__btn.testimonials__btn--next.btn
+          svg.testimonials__btn-icon
+            use(href='images/sprite.svg#arrow-next')
+<!-- /Testimonials -->

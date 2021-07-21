@@ -1,0 +1,9 @@
+extends common/layout
+include includes/mixins/mixins
+
+block content
+  main.content
+    +hero('background-image: url(images/bg/facilities-hero-bg.jpg);')
+    include includes/facilities/facilities
+    include includes/facilities/gallery
+    include common/testimonials

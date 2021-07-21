@@ -1,0 +1,48 @@
+// About
+.about {
+  &__item {
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col {
+    flex: 1 1 50%;
+  }
+
+  &__content {
+    border-left: 2px solid $brand-secondary;
+    padding: 0 2rem;
+  }
+
+  &__subheading {
+    text-align-last: left;
+  }
+
+  &__text {
+    margin: 0 0 2rem;
+    text-align: justify;
+  }
+
+  @include respond(max-md) {
+    & {
+      padding-bottom: 0;
+    }
+
+    &__col {
+      flex-basis: 100%;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__content {
+      padding: 0 0 0 1.36rem;
+    }
+  }
+}

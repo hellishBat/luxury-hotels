@@ -1,15 +1,49 @@
 // Button
 .btn {
+  position: relative;
   display: inline-block;
-  text-align: center;
-  font-size: inherit;
-  line-height: 1;
   border: none;
-  background-color: transparent;
+  border-radius: 4px;
+  background-color: $brand-main;
+  text-transform: uppercase;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: $white;
   outline: transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition-property: box-shadow, background-color, color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: all 0.3s ease 0s;
+
+  &--long {
+    padding: 0.8rem 2.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  &--sm {
+    padding: 0.6rem 1.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  &--md {
+    padding: 1rem 1.72rem;
+    font-size: 0.8rem;
+  }
+
+  @include respond(min-md) {
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($brand-main, 0.5);
+    }
+
+    &:hover {
+      background-color: lighten($brand-main, 20%);
+      color: lighten($brand-secondary, 15%);
+    }
+
+    &:active {
+      box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.3);
+    }
+  }
 }

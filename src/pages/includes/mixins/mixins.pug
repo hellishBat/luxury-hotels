@@ -1,0 +1,45 @@
+//- Mixins
+
+//- Hero
+mixin hero(hero_bg)
+  section#hero.hero.d-f.ai-c.jc-c.js-scroll-target(style= hero_bg)
+    .container
+      .hero__inner
+        .hero__caption(data-aos='fade-right' data-aos-delay='0')
+          | Welcome to
+        .hero__title.hero__title--lg(data-aos='fade-right' data-aos-delay='300')
+          | Luxury
+        .hero__title.hero__title--sm(data-aos='fade-right' data-aos-delay='600')
+          | Hotels
+        p.hero__text(data-aos='fade-right' data-aos-delay='900')
+          | Book your stay and enjoy Luxury redefined at the most affordable rates.
+        a.hero__btn.btn(href='#')
+          | Book Now
+          svg.hero__btn-icon
+            use(href='images/sprite.svg#book')
+    .hero__scroll
+      .hero__scroll-text
+        | Scroll
+      svg.hero__scroll-icon
+        use(href='images/sprite.svg#scroll-down')
+
+//- Testimonials item
+mixin testimonials_item(testimonials_quote, testimonials_author)
+  .testimonials__item.swiper-slide
+    q.testimonials__quote= testimonials_quote
+    .testimonials__author= testimonials_author
+
+//- Facilities item
+mixin facilities_item(facilities_icon, facilities_title, facilities_description)
+  .facilities__item(data-aos='zoom-in' data-aos-delay='300')
+    svg.facilities__icon
+      use(href= facilities_icon)
+    .facilities__title= facilities_title
+    p.facilities__description= facilities_description
+
+
+//- Gallery item
+mixin gallery_item(gallery_thumb, gallery_img, gallery_alt)
+  a.gallery__item(href= gallery_thumb)
+    .gallery__pic.ar-16-9.overlay-30
+      img.gallery__img(src=gallery_img alt= gallery_alt)

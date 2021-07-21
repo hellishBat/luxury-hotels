@@ -1,3 +1,5 @@
+// Mixins
+
 // Media, min-width
 @mixin respond($breakpoint) {
   @if $breakpoint==min-xs {
@@ -24,7 +26,31 @@
     }
   }
 
+  @if $breakpoint==min-xl {
+    @media only screen and (min-width: $media-xl+px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==min-xxl {
+    @media only screen and (min-width: $media-xxl+px) {
+      @content;
+    }
+  }
+
   // Media, max-width
+  @if $breakpoint==max-xxl {
+    @media only screen and (max-width: $media-xxl+px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==max-xl {
+    @media only screen and (max-width: $media-xl+px) {
+      @content;
+    }
+  }
+
   @if $breakpoint==max-lg {
     @media only screen and (max-width: $media-lg+px) {
       @content;
@@ -50,6 +76,7 @@
   }
 }
 
+// Connects fonts via Font-face
 @mixin font-face($font-family, $url, $weight) {
   @font-face {
     font-family: "#{$font-family}";

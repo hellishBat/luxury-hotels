@@ -1,30 +1,28 @@
 <!-- Header -->
-header#header.header
+header.header
   .container
-    .header__inner
-      .header__menu(title='Navigation Menu')
+    .header__inner.d-f.ai-c
+      a.header__logo.logo(href='index.html')
+        img.header__img.header__img--lg.logo__img(src='images/logo/logo.svg' alt='Luxury Hotels')
+        img.header__img.header__img--sm.logo__img(src='images/logo/logo-sm.svg' alt='Luxury Hotels')
+      .header__menu(aria-label='Navigation Menu')
         button.header__menu-btn.js-nav-btn
           span.header__line
           span.header__line
           span.header__line
+
         nav.header__nav.js-nav-menu
           ul.header__list.d-f
             li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
+              a.header__link(href='index.html')
+                | Home 
             li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
+              a.header__link(href='facilities.html')
+                | Facilities 
             li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
+              a.header__link(href='rooms.html')
+                | Rooms & Suites 
             li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
-            li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
-            li.header__item
-              a.header__link(href='#anchor-id')
-                | Link
+              a.header__link(href='contact-us.html')
+                | Contact Us 
 <!-- /Header -->

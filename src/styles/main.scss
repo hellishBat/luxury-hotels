@@ -8,15 +8,24 @@
 // Base
 @import "base/base";
 @import "base/fonts";
+@import "base/typography";
 @import "base/helpers";
 
 // Components
 @import "components/logo";
 @import "components/btn";
+@import "components/section";
 
 // Layout-related sections
 @import "common/header";
+@import "common/hero";
+@import "common/testimonials";
 @import "common/footer";
 
 // Page-specific styles
-@import "pages/index/block1";
+@import "pages/index/about";
+@import "pages/facilities/facilities";
+@import "pages/facilities/gallery";
+@import "pages/rooms/rooms";
+@import "pages/contact-us/contact-us";
+

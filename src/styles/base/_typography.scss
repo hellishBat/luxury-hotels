@@ -1,0 +1,64 @@
+// Typography
+.title {
+  font-size: 4rem;
+
+  @include respond(max-sm) {
+    & {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.title,
+.heading,
+.subheading {
+  font-weight: 700;
+}
+
+.title,
+.heading {
+  text-transform: uppercase;
+}
+
+.title,
+.heading,
+.tagline,
+.text {
+  text-align: center;
+}
+
+.heading,
+.subheading {
+  margin-bottom: 1.36rem;
+  font-family: $adobe-garamond-pro;
+  font-size: 2.4rem;
+  letter-spacing: 0.02em;
+}
+
+.heading {
+  font-size: 2.88rem;
+  letter-spacing: 0.05em;
+
+  @include respond(max-sm) {
+    & {
+      font-size: 2rem;
+    }
+  }
+}
+
+.subheading {
+  @include respond(max-sm) {
+    & {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.tagline {
+  margin-bottom: 3.72rem;
+  font-size: 1.44rem;
+}
+
+.text {
+  margin: 0;
+}

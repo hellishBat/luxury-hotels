@@ -1,0 +1,48 @@
+<!-- Contact-Us -->
+section.contact-us
+  .contact-us__header.js-scroll-target
+    .container
+      .contact-us__title.title
+        | Contact Us
+  .contact-us__body
+    .container
+      .contact-us__inner.d-f.fxw-w.ai-fs
+        .contact-us__row
+          .contact-us__heading.heading
+            | We Are Here For You
+          p.contact-us__text(data-aos='fade-up' data-aos-delay='0')
+            | At Luxury Hotels, we take our customers seriously. Do you have any enquiries, complaints or requests? Please
+            | forward it to our support desk and we will get back to you as soon as possible!
+        
+        .contact-us__col(data-aos='fade-right' data-aos-delay='300')
+          address.contact-us__address
+            ul.contact-us__list
+              li.contact-us__item
+                a.contact-us__link(href='https://goo.gl/maps/cERpZHbANwMUkj2b6' target='_blank')
+                  | Marina 19-21 08005 Barcelona, Spain
+              li.contact-us__item
+                a.contact-us__link.contact-us__link--arrow(href='https://goo.gl/maps/cERpZHbANwMUkj2b6' target='_blank')
+                  | View map
+                  svg.contact-us__icon
+                    use(href='images/sprite.svg#arrow-right')
+              li.contact-us__item
+                a.contact-us__link(href='tel:+34345678903')
+                  | Phone: +34 345 678 903
+              li.contact-us__item
+                a.contact-us__link(href='mailto:luxury_hotels@gmail.com')
+                  | Email: luxury_hotels@gmail.com
+        
+        .contact-us__col.contact-us__col--form(data-aos='fade-left' data-aos-delay='300')
+          form.contact-us__form(action='#')
+            fieldset.contact-us__fieldset
+              label.contact-us__label(for='contact-us__name')
+                | Name
+              input#contact-us__name.contact-us__input(type='text' name='contact-us__name' required='')
+              label.contact-us__label(for='contact-us__email')
+                | Email Address
+              input#contact-us__email.contact-us__input(type='email' name='contact-us__email' required='')
+              label.contact-us__label(for='contact-us__message')
+                | Message
+              textarea.contact-us__message(name="contact-us__message", cols="30", rows="10")
+              input.btn.btn--long(type='submit' value='Submit')
+<!-- /Contact-Us -->

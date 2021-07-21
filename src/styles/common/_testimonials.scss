@@ -1,0 +1,42 @@
+.testimonials {
+  text-align: center;
+  padding-bottom: 6.0rem;
+
+  &__slider {
+    padding: 0.5rem 0;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__subheading {
+    margin-bottom: 1.31rem;
+  }
+
+  &__quote {
+    display: block;
+    margin-bottom: 0.76rem;
+    font-size: 1.2rem;
+  }
+
+  &__btn {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.64rem;
+    border-radius: 0.48rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: translate(-50%, -50%);
+  }
+}

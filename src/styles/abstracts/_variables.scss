@@ -1,18 +1,26 @@
+// Variables
 // Container properties
-$cont-width: 1140;
+$cont-width: 1470;
 $min-width: 320px;
-$max-width: $cont-width + 30;
+$max-width: $cont-width+30;
 
 // Media breakpoints
+$media-xxl: $max-width;
+$media-xl: 1399.98;
 $media-lg: 1199.98;
 $media-md: 991.98;
 $media-sm: 767.98;
 $media-xs: 575.98;
 
 // Fonts
-$default-font: sans-serif;
+$adobe-garamond-pro: "AdobeGaramondPro",
+Serif;
+$montserrat: "Montserrat",
+Sans-Serif;
+$default-font: $montserrat;
 
 // Colours
 $white: #ffffff;
-$black: #000000;
-$primary-accent: blue;
+$brand-main: #e0b973;
+$brand-secondary: #14274a;
+$overlay-color: #27274A;
