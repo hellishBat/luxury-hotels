@@ -11,11 +11,12 @@
   line-height: inherit;
   letter-spacing: 0.05em;
   text-align: center;
+  white-space: nowrap;
   color: $white;
+  transition: all 0.3s ease 0s;
   outline: transparent;
   cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.3s ease 0s;
+  user-select: none;
 
   &--long {
     padding: 0.8rem 2.5rem 0.8rem;

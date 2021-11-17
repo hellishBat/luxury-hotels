@@ -1,12 +1,9 @@
 // Dynamic VH (Fixes 100VH issue on mobile browsers)
 export const setDynamicVH = () => {
   const root = document.documentElement;
-  let vh = window.innerHeight;
+  const vh = window.innerHeight;
   root.style.setProperty('--dynamic-vh', vh + 'px');
-}
+};
 
-setDynamicVH();
-
-window.addEventListener('resize', () => {
-  setDynamicVH();
-});
+window.addEventListener('load', setDynamicVH);
+window.addEventListener('resize', setDynamicVH);
