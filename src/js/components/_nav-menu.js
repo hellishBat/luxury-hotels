@@ -42,9 +42,16 @@ const setActiveLink = () => {
   const currentPath = window.location.pathname.split("/")[1];
 
   for (let i = 0; i < navLinks.length; i++) {
-    if (navLinks[i].getAttribute("href").indexOf(currentPath) !== -1) {
+    if (
+      currentPath.length > 0 &&
+      navLinks[i].getAttribute("href").indexOf(currentPath) !== -1
+    ) {
       navLinks[i].classList.toggle("active");
     }
+  }
+
+  if (currentPath.length === 0) {
+    navLinks[0].classList.toggle("active");
   }
 };
 
